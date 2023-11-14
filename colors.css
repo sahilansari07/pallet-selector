@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    color-scheme: dark light;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.creativeWrapper {
+    max-width: 50rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+section {
+    padding-block: 1rem;
+}
+
+h1 {
+    padding: 0;
+}
+
+.wrapper {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0, 12%);
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.wavy {
+    /* mask created with 
+    https://css-generators.com/wavy-shapes/ */
+
+    background:
+        linear-gradient(to right,
+            black,
+            white);
+
+    --mask:
+        radial-gradient(111.80px at 50% calc(100% - 150.00px), #000 99%, #0000 101%) calc(50% - 100px) 0/200px 100%,
+        radial-gradient(111.80px at 50% calc(100% + 100.00px), #0000 99%, #000 101%) 50% calc(100% - 50px)/200px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+
+
+.footer {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.footer .control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main {
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.red {
+    height: 95%;
+    background-color: aqua;
+    display: flex;
+    align-items: end;
+    border-radius: 20px;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.colorcode {
+    text-align: center;
+}
+
+
+i {
+    font-size: 2em;
+    padding: 5px;
+    pointer-events: none;
+}
+
+.modal {
+    height: 100dvh;
+    width: 100dvw;
+    position: absolute;
+    z-index: 9;
+    pointer-events: none;
+}
+
+.save-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    gap: 20px;
+    z-index: 10;
+}
+
+.load-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    gap: 20px;
+    z-index: 10;
+}
+
+.modal input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 3px 6px 2px #00000012;
+}
+
+button {
+    width: 3.5rem;
+    border: none;
+    background-color: hsl(0, 0%, 7%);
+    border-radius: 5px;
+    font-size: 0.7rem;
+    color: white;
+    border-color: hsl(10%, 91%, 87%);
+    border-width: 2px;
+    border-style: double;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+#overlay {
+    height: 100dvh;
+    width: 100dvw;
+    position: absolute;
+    pointer-events: none;
+}
+
+.transparent {
+    background-color: #020000a6;
+}
+
+.noclick {
+    pointer-events: initial;
+}
+
+.load-box li {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+}
+
+.load-box li span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.hoveryn:hover {
+    background-color: grey;
+}
+
+p,
+span {
+    pointer-events: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.selected {
+    background-color: darkcyan;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+p {
+    color: rgb(24, 24, 24);
+    padding: 2px;
+}
+
+span {
+    border-color: hsl(10%, 91%, 87%);
+    border-width: 2px;
+    border-style: double;
+    border-color: #000;
+}

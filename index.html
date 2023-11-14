@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colors.css">
+    <script src="https://kit.fontawesome.com/4a05f73f15.js" crossorigin="anonymous"></script>
+    <script src="save-modal.js" defer></script>
+    <script src="colors.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="modal">
+        <div class="save-box hidden" id="save-box">
+            <input type="text" name="color-name" placeholder="Type color name" required min="5" max="20" />
+            <div class="button-wrapper">
+                <button class="save-btn" name="save-btn" id="save-btn">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                </button>
+                <button class="cancel-btn" name="cancel-btn" id="cancel-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="load-box hidden" id="load-box">
+            <ul class="colorlist" id="colorlist"></ul>
+            <div class="button-wrapper">
+                <button class="copy-btn" name="copy-btn" id="copy-btn">
+                    <i class="fa-solid fa-copy hidden"></i>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </button>
+                <button class="delete-btn" name="delete-btn" id="delete-btn">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button class="load-cancel-btn" name="load-cancel-btn" id="load-cancel-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper" id="wrapper">
+        <div id="overlay"></div>
+
+        <section class="wavy">
+            <div class="creativeWrapper">
+                <h1 class="title"> Pallet selector </h1>
+            </div>
+        </section>
+
+        <section class="main">
+
+            <div name="color1" class="red colorbox">
+                <div class="control">
+                    <input type="range" min="0" max="100" value="50" class="slider" data-index="0" />
+                    <p class="colorcode"></p>
+                    <button class="lock">
+                        <i class="fa-solid fa-lock hidden"></i>
+                        <i class="fa-solid fa-lock-open"> </i>
+                    </button>
+                </div>
+            </div>
+
+            <div name="color2" class="red colorbox">
+                <div class="control">
+                    <input type="range" min="0" max="100" value="50" class="slider" data-index="1" />
+                    <p class="colorcode"></p>
+                    <button class="lock">
+                        <i class="fa-solid fa-lock hidden"></i>
+                        <i class="fa-solid fa-lock-open"> </i>
+                    </button>
+                </div>
+            </div>
+
+            <div name="color3" class="red colorbox">
+                <div class="control">
+                    <input type="range" min="0" max="100" value="50" class="slider" data-index="2" />
+                    <p class="colorcode"></p>
+                    <button class="lock">
+                        <i class="fa-solid fa-lock hidden"></i>
+                        <i class="fa-solid fa-lock-open"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div name="color4" class="red colorbox">
+                <div class="control">
+                    <input type="range" min="0" max="100" value="50" class="slider" data-index="3" />
+                    <p class="colorcode"></p>
+                    <button class="lock">
+                        <i class="fa-solid fa-lock hidden"></i>
+                        <i class="fa-solid fa-lock-open"> </i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="control">
+                <button class="refresh" id="refresh">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </button>
+                <button class="save" id="app-savebtn">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                </button>
+                <button class="load hidden" id="app-loadbtn">
+                    <i class="fa-solid fa-palette"></i>
+                </button>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
